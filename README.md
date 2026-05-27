@@ -99,7 +99,7 @@ Objective: Identify the top performing markets by order volume.
 
 ## Dashboard Preview
 ![Power BI Dashboard](powerbi_dashboard.png)
-![Delivery Status Chart](supply_chain.png)
+![Delivery Status Chart](delivery_status.png)
 
 ---
 

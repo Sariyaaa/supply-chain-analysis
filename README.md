@@ -255,7 +255,7 @@ Consumer segment and LATAM/Europe markets, identified using a CTE-based query.
 ---
 
 ## Excel Pivot Table Analysis
-![Pivot Table](pivot_table.png)
+![Pivot Table](Pivot%20_Table.png)
 
 ---
 

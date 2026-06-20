@@ -1,5 +1,6 @@
-
+```sql
 USE supply_chain;
+
 -- Query 1: Total Orders
 SELECT COUNT(*) AS Total_Orders
 FROM supply_chain_cleaned;
@@ -133,3 +134,17 @@ SELECT
 FROM supply_chain_cleaned
 GROUP BY Delivery_Category
 ORDER BY Total_Orders DESC;
+
+
+-- SECTION 5: REVENUE IMPACT ANALYSIS
+
+-- Query 13: Sales Revenue Impact of Late Deliveries
+SELECT 
+    `Delivery Status`,
+    COUNT(*) AS Total_Orders,
+    ROUND(SUM(`Sales`), 2) AS Total_Sales,
+    ROUND(SUM(`Sales`) * 100.0 / (SELECT SUM(`Sales`) FROM supply_chain_cleaned), 1) AS Pct_of_Total_Sales
+FROM supply_chain_cleaned
+WHERE `Delivery Status` = 'Late delivery'
+GROUP BY `Delivery Status`;
+```
